@@ -381,7 +381,7 @@ void ExceptionHandler::SignalHandler(int sig, siginfo_t* info, void* uc) {
   // successfully, restore the default handler. Otherwise, restore the
   // previously installed handler. Then, when the signal is retriggered, it will
   // be delivered to the appropriate handler.
-  if (handled) {
+  if (false && handled) {
     InstallDefaultHandler(sig);
   } else {
     RestoreHandlersLocked();
